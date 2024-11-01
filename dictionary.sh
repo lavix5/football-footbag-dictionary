@@ -16,8 +16,8 @@ then
         exit $E_BADARGS
 fi
 
-line_number_footbag=$(grep -n "$trick" footbag | cut -d : -f 1)
-line_number_football=$(grep -n "$trick" football | cut -d : -f 1)
+line_number_footbag=$(grep -in "$trick" footbag | cut -d : -f 1)
+line_number_football=$(grep -in "$trick" football | cut -d : -f 1)
 
 if [[ "$line_number_footbag" == "" && "$line_number_football" == "" ]]
 then
